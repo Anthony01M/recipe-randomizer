@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recipe Randomizer</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1>Recipe Randomizer</h1>
+        <form id="recipeForm">
+            <input type="text" id="recipeNameInput" placeholder="Enter recipe name" required>
+            <textarea id="recipeIngredientsInput" placeholder="Enter ingredients" required></textarea>
+            <textarea id="recipeInstructionsInput" placeholder="Enter instructions" required></textarea>
+            <button type="submit">Add Recipe</button>
+        </form>
+        <button id="suggestRecipeButton">Suggest Recipe</button>
+        <button id="viewRecipesButton">View Recipes</button>
+    </div>
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Suggested Recipe</h2>
+            <p id="recipeName"></p>
+            <h3>Ingredients</h3>
+            <p id="recipeIngredients"></p>
+            <h3>Instructions</h3>
+            <p id="recipeInstructions"></p>
+        </div>
+    </div>
+    <div id="recipeListModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Recipe List</h2>
+            <ul id="recipeList"></ul>
+        </div>
+    </div>
+    <div id="editRecipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Recipe</h2>
+            <form id="editRecipeForm">
+                <input type="text" id="editRecipeNameInput" placeholder="Enter recipe name" required>
+                <textarea id="editRecipeIngredientsInput" placeholder="Enter ingredients" required></textarea>
+                <textarea id="editRecipeInstructionsInput" placeholder="Enter instructions" required></textarea>
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
